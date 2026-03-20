@@ -269,7 +269,7 @@ Flagged claim context sent to Claude:
 }
      │
      ▼
-Claude output (to admin fraud queue):
+gpt output (to admin fraud queue):
 "Fraud Risk: HIGH
 1. Worker GPS 8km outside claimed disruption zone at claim time.
 2. Platform session was active — orders were being accepted.
@@ -650,42 +650,6 @@ RAG grounds every LLM response in actual policy documents and worker-specific da
 - Fraud alerts queue with LLM narrative summaries [Gen AI 5.4]
 - **AI Daily Brief** — OpenAI-generated summary at dashboard top [Gen AI 5.5]
 - Predictive next-week claim forecast by zone (weather model + LLM)
-
----
-
-## 16. Repository Structure
-
-```
-gigshield/
-├── frontend/                    # React PWA
-│   ├── src/
-│   │   ├── pages/               # Onboarding, Dashboard, Policy, Claims, Admin
-│   │   ├── components/          # PolicyCard, ClaimTimeline, TrustMeter, SaathiChat
-│   │   ├── services/            # API calls, WebSocket
-│   │   └── i18n/                # Hindi/regional language strings
-├── backend/                     # Node.js + Express
-│   ├── routes/                  # auth, policy, claims, triggers, payouts, llm
-│   ├── services/
-│   │   ├── WeatherService.js    # OpenWeatherMap + CPCB polling
-│   │   ├── TriggerEngine.js     # Cron jobs + Bull event queue
-│   │   ├── PayoutService.js     # Razorpay integration
-│   │   ├── FraudService.js      # ML score + LLM narrative
-│   │   └── LLMGateway.js        # All Claude API calls + prompt templates
-│   ├── models/                  # User, Policy, Claim, Trigger, EarningsDNA, Pool
-│   └── jobs/                    # Scheduled crons (trigger polling, daily brief)
-├── ml-engine/                   # Python FastAPI microservice
-│   ├── models/                  # Trained model files
-│   ├── train/                   # Training scripts + mock datasets
-│   ├── prompts/                 # LLM prompt templates (all 6 use cases)
-│   └── api.py                   # /predict/risk, /predict/fraud, /predict/earnings
-├── rag-engine/                  # RAG pipeline for Saathi chatbot
-│   ├── ingest/                  # Policy docs + FAQ ingestion to Pinecone
-│   ├── retriever.py             # Semantic search from vector DB
-│   └── chatbot.py               # Query → retrieve → Claude → response
-├── mock-data/                   # Sample disruption datasets, worker earnings
-├── docs/                        # Architecture diagrams, wireframes, API docs
-└── README.md                    # This file
-```
 
 ---
 
