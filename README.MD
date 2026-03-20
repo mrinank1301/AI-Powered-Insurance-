@@ -655,11 +655,11 @@ RAG grounds every LLM response in actual policy documents and worker-specific da
 
 ## 👥 Team
 
-> Mrinank Kavuri
-> Aadya Mishra
-> Avni Sharma
-> Sai Prashanth
-> Janesh Prathipati 
+> Mrinank Kavuri,
+> Aadya Mishra,
+> Avni Sharma,
+> Sai Prashanth,
+> Janesh Prathipati, 
 
 ---
 
