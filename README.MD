@@ -19,11 +19,9 @@
 9. [AI/ML + Gen AI Architecture](#9-aiml--gen-ai-architecture)
 10. [System Architecture](#10-system-architecture)
 11. [Tech Stack](#11-tech-stack)
-12. [Development Plan (6 Weeks)](#12-development-plan-6-weeks)
-13. [API Integrations](#13-api-integrations)
-14. [Fraud Detection Strategy](#14-fraud-detection-strategy)
-15. [Dashboard Design](#15-dashboard-design)
-16. [Repository Structure](#16-repository-structure)
+12. [API Integrations](#12-api-integrations)
+13. [Fraud Detection Strategy](#13-fraud-detection-strategy)
+14. [Dashboard Design](#14-dashboard-design)
 
 ---
 
